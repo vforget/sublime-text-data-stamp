@@ -6,4 +6,4 @@ class InsertDatetimeCommand(sublime_plugin.TextCommand):
         fmt = '%d-%m-%Y'
         dt = datetime.datetime.now().strftime(fmt)
         for s in sel:
-            self.view.replace(edit, s, dt + ": ")
+            self.view.insert(edit, 0, dt + ": ")
